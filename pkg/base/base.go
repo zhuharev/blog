@@ -13,6 +13,5 @@ func RenderMarkdownString(in string) string {
 
 // RenderRawMarkdown render markdown to byte slice
 func RenderRawMarkdown(body []byte) []byte {
-	body = blackfriday.Run(body)
-	return body
+	return blackfriday.Run(body, blackfriday.WithExtensions(blackfriday.HardLineBreak))
 }
