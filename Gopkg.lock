@@ -4,8 +4,7 @@
 [[projects]]
   name = "github.com/Unknwon/com"
   packages = ["."]
-  revision = "28b053d5a2923b87ce8c5a08f3af779894a72758"
-  version = "v1"
+  revision = "7677a1d7c1137cd3dd5ba7a076d0c898a1ef4520"
 
 [[projects]]
   name = "github.com/asdine/storm"
@@ -95,6 +94,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f7dd30809e282e264ab486b27848bb7b79eacab569a44d979de90a726e7c1865"
+  inputs-digest = "15af961281f5af0648eaed21306719d8f48581d81b8a3a016bf61a44483800aa"
   solver-name = "gps-cdcl"
   solver-version = 1

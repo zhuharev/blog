@@ -62,3 +62,7 @@
 [[constraint]]
   name = "gopkg.in/yaml.v2"
   version = "2.2.1"
+
+[[override]]
+  name = "github.com/Unknwon/com"
+  revision = "7677a1d7c1137cd3dd5ba7a076d0c898a1ef4520"

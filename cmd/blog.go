@@ -8,12 +8,12 @@ package cmd
 import (
 	"html/template"
 	"log"
-	"ug/pkg/base"
 
 	"github.com/go-macaron/binding"
 	"github.com/zhuharev/blog/controllers"
 	"github.com/zhuharev/blog/models"
 	"github.com/zhuharev/blog/pkg/auth"
+	"github.com/zhuharev/blog/pkg/base"
 	"github.com/zhuharev/blog/pkg/context"
 	"github.com/zhuharev/blog/pkg/setting"
 
