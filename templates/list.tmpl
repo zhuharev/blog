@@ -1,0 +1,24 @@
+<div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">Последние записи</h1>
+                {{ range .posts }}
+                <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Eric Ferraiuolo&#x27;s avatar" class="post-avatar" src="/img/common/ericf-avatar.png">
+
+                        <a href="/{{ .Slug }}"><h2 class="post-title">{{ .Title }}</h2></a>
+
+                        <p class="post-meta">
+                            <a class="post-author" href="//t.me/zhuharev">c ❤️ @zhuharev</a></a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        {{ markdown .Body }}
+                    </div>
+                </section>{{ end }}
+            </div>
+        </div>
+</div>

@@ -1,0 +1,6 @@
+admin:
+  path: "/admin"
+  login: "admin"
+  password: "password"
+data:
+  kv_path: "data/kv.storm"
