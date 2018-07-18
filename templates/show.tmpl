@@ -16,6 +16,10 @@
 
                     <div class="post-description">
                         {{ markdown .Body }}
+
+                        <div>
+<b class="text-muted">Опубликовано: {{ .CreatedAt.Format "02.01.2006" }} в {{ .CreatedAt.Format "15:04" }}</b>
+                        </div>
                     </div>
                 </section>{{ end }}
             </div>

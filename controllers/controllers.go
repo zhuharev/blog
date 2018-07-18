@@ -9,6 +9,7 @@ import (
 	"log"
 
 	"github.com/zhuharev/blog/models"
+	"github.com/zhuharev/blog/pkg/base"
 	"github.com/zhuharev/blog/pkg/context"
 )
 
@@ -19,6 +20,9 @@ func Create(ctx *context.Context) {
 
 // PostCreate handle post request with form
 func PostCreate(ctx *context.Context, post models.Post) {
+	if post.Slug == "" {
+		post.Slug = base.Slug(post.Title)
+	}
 	err := models.Create(&post)
 	if err != nil {
 		ctx.Error(200, err.Error())

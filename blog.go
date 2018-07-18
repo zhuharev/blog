@@ -9,10 +9,11 @@ import (
 	"os"
 
 	"github.com/zhuharev/blog/cmd"
+
 	"gopkg.in/urfave/cli.v2"
 )
 
-var version = "1.0.0"
+var version = "1.0.1"
 
 func main() {
 	app := &cli.App{
