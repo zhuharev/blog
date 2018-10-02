@@ -15,7 +15,7 @@ import (
 
 // Create handler shows creating form
 func Create(ctx *context.Context) {
-	ctx.HTML(200, "create")
+	ctx.Render.HTML(200, "create", nil)
 }
 
 // PostCreate handle post request with form
@@ -25,11 +25,11 @@ func PostCreate(ctx *context.Context, post models.Post) {
 	}
 	err := models.Create(&post)
 	if err != nil {
-		ctx.Error(200, err.Error())
+		ctx.Error(500)
 		return
 	}
 	log.Printf("%+v", post)
-	ctx.Redirect("/" + post.Slug)
+	ctx.Context.Redirect("/" + post.Slug)
 }
 
 // Show shows single post
@@ -39,20 +39,20 @@ func Show(ctx *context.Context) {
 	)
 	post, err := models.Get(slug)
 	if err != nil {
-		ctx.Error(404, "Страница не найдена")
+		ctx.Error(404)
 		return
 	}
 	ctx.Data["post"] = post
-	ctx.HTML(200, "show")
+	ctx.Render.HTML(200, "show", ctx.Data)
 }
 
 // List show recent blog posts
 func List(ctx *context.Context) {
 	posts, err := models.List()
 	if err != nil {
-		ctx.Error(404, "Страница не найдена")
+		ctx.Error(404)
 		return
 	}
 	ctx.Data["posts"] = posts
-	ctx.HTML(200, "list")
+	ctx.Render.HTML(200, "list", ctx.Data)
 }

@@ -5,17 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Блог Жухарева</title>
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-<link rel="stylesheet" href="https://purecss.io/combo/1.18.13?/css/layouts/blog.css">
 <style>
-.content{
-  margin: 0 auto;
-  max-width: 1024px;
-}
 .text-muted{
   font-size: .8em;
   color: #aaa;
 }</style>
+<style>
+/*! CSS Used from: https://unpkg.com/purecss@1.0.0/build/pure-min.css */
+a:active,a:hover{outline:0;}
+body{margin:0;font-family:sans-serif;}
+header,section{display:block;}
+a{background-color:transparent;}
+h1{font-size:2em;margin:.67em 0;}
+.pure-u-1{letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto;display:inline-block;zoom:1;}
+.pure-u-1{width:100%;}
+/*! CSS Used from: https://purecss.io/combo/1.18.13?/css/layouts/blog.css */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{text-decoration:none;color:rgb(61, 146, 201);}
+a:hover,a:focus{text-decoration:underline;}
+.content-subhead{text-transform:uppercase;color:#aaa;border-bottom:1px solid #eee;padding:0.4em 0;font-size:80%;font-weight:500;letter-spacing:0.1em;}
+.content{padding:2em 1em 0;}
+.post{padding-bottom:2em;}
+.post-title{font-size:2em;color:#222;margin-bottom:0.2em;}
+.post-description{font-family:Georgia, "Cambria", serif;color:#444;line-height:1.8em;}
+.post-meta{color:#999;font-size:90%;margin:0;}
+@media (min-width: 48em){
+.content{padding:2em 3em 0;margin-left:25%;}
+}
+/*! CSS Used from: Embedded */
+.content{margin:0 auto;max-width:1024px;}
+</style>
 </head>
 <body>
   {{ yield }}

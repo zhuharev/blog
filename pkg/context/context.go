@@ -6,20 +6,24 @@
 // for macaron framework
 package context
 
-import macaron "gopkg.in/macaron.v1"
+import (
+	"github.com/zhuharev/go-macaron-jade"
+	macaron "gopkg.in/macaron.v1"
+)
 
 // Context wrap *macaron.Context
 type Context struct {
 	*macaron.Context
+	jade.Render
 }
 
 // Contexter middleware
 func Contexter() macaron.Handler {
-	return func(c *macaron.Context) {
+	return func(c *macaron.Context, r jade.Render) {
 		ctx := &Context{
 			Context: c,
+			Render:  r,
 		}
-
 		c.Map(ctx)
 	}
 }

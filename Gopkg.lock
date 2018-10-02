@@ -16,8 +16,8 @@
     "internal",
     "q"
   ]
-  revision = "a86fa5e09c9c50a06416b08fd9acd4839fb2d62e"
-  version = "v2.1.0"
+  revision = "bda68dab90fc908ee5dbccb36400edf4f54972d6"
+  version = "v2.1.1"
 
 [[projects]]
   name = "github.com/coreos/bbolt"
@@ -57,21 +57,36 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/zhuharev/go-macaron-jade"
+  packages = ["."]
+  revision = "b94fbf33523d1fbe9ec363ea29cbb03dbca245a6"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/zhuharev/jade"
+  packages = [
+    ".",
+    "parser"
+  ]
+  revision = "4b3e11557a28cb8842d06a600564f36468fe50f4"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/crypto"
   packages = ["pbkdf2"]
-  revision = "12892e8c234f4fe6f6803f052061de9057903bb2"
+  revision = "a2144134853fc9a27a7b1e3eb4f19f1a76df13c9"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "378d26f46672a356c46195c28f61bdb4c0a781dd"
+  revision = "ac767d655b305d4e9612f5f6e33120b9176c4ad4"
 
 [[projects]]
   name = "gopkg.in/ini.v1"
   packages = ["."]
-  revision = "6333e38ac20b8949a8dd68baa3650f4dee8f39f0"
-  version = "v1.33.0"
+  revision = "358ee7663966325963d4e8b2e1fbd570c5195153"
+  version = "v1.38.1"
 
 [[projects]]
   name = "gopkg.in/macaron.v1"
@@ -94,6 +109,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "15af961281f5af0648eaed21306719d8f48581d81b8a3a016bf61a44483800aa"
+  inputs-digest = "e50e1acc43d9376c5e81f3b837dd920699b3d035ec920c3f001fec1c1502a67c"
   solver-name = "gps-cdcl"
   solver-version = 1
